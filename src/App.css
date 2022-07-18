@@ -50,14 +50,14 @@
 .banner-title{
   position:absolute;
   color:white;
-  top:50vh;
+  top:40vh;
   left:5vw;
   /* font-size:2rem; */
 }
 .banner-text{
   position:absolute;
   color:white;
-  top:60vh;
+  top:50vh;
   left:5vw;
   margin-right: 5vw;
   /* overflow: hidden; */
@@ -97,6 +97,13 @@ position: relative;
   justify-content: center;
 }
 
+.favourites-list{
+    padding: 3rem;
+  }
+  .favourites-table{
+    padding: 3rem;
+  }
+
 
 
 
@@ -117,7 +124,7 @@ position: relative;
   }
 
   .banner-text{
-    top:15vh;
+    top:10vh;
     left:5vw;
   }
 
@@ -131,4 +138,8 @@ position: relative;
   .movie-img{
     width: 40vw;
   }
+
+  
+  
 }
+

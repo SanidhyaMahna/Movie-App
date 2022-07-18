@@ -1,10 +1,17 @@
+import axios from "axios";
 import React, { Component } from "react";
 import { movies } from "./getMovies";
+import API_KEY from "../secrets"
 export default class List extends Component {
+
   constructor() {
     super();
+    // Constructor is called
     this.state = {
       hover: "",
+      parr:[1],
+      currPage : 1,
+      movies :[],
     };
   }
 
@@ -19,11 +26,20 @@ export default class List extends Component {
         hover: '',
       });
   };
+  async componentDidMount(){
+    // console.log("componentDidMount() is called");
+    // console.log(API_KEY);
+    let ans = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currPage}`);
+    // console.log(res.data);
+    this.setState({
+      movies : [...ans.data.results] //[{}, {}, {}]
+    });
+  }
   render() {
-    let movie = movies.results; //fetch
+    // let movie = movies.results; //fetch
     return (
       <>
-        {movie.length == 0 ? (
+        {this.state.movies.length == 0 ? (
           <div className="spinner-grow text-success" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
@@ -33,7 +49,7 @@ export default class List extends Component {
               <strong>Trending</strong>
             </h3>
             <div className="movies-list">
-              {movie.map((movieObj) => (
+              {this.state.movies.map((movieObj) => (
                 <div
                   className="card movie-card"
                   onMouseEnter={() => this.handleEnter(movieObj.id)}
@@ -54,7 +70,7 @@ export default class List extends Component {
                       </p> */}
                   <div className="button-wrapper">
                     {this.state.hover == movieObj.id && 
-                      <a href="#" class="btn btn-primary movie-button">
+                      <a href="#" class="btn btn-danger movie-button">
                         Add to Favourites
                       </a>
                     }
