@@ -28,6 +28,9 @@
   color: #61dafb;
 }
 
+strong{
+  color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -57,7 +60,7 @@
 .banner-text{
   position:absolute;
   color:white;
-  top:50vh;
+  top:57vh;
   left:5vw;
   margin-right: 5vw;
   /* overflow: hidden; */
