@@ -133,8 +133,8 @@ export default class List extends Component {
                     {this.state.hover == movieObj.id && (
                      
                       <a class="btn btn-danger movie-button" onClick={()=>{this.handleFavourites(movieObj)}}>
-                        {/* {this.state.favMovies.} */}
-                        Add to Favourites
+                        {this.state.favMovies.includes(movieObj.id)?"Remove from Favourites":"Add to Favourites" }
+                        
                       </a>
                     )}
                   </div>

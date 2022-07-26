@@ -8,6 +8,7 @@ export default class Navbar extends Component {
           color:"white",
           padding:'1rem',
           justifyContent:"center", 
+          width: "100%",
           alignItems:"center"
           }}>  
             <Link to="/" style={{textDecoration:"none", color: "white", fontStyle: "italic"}}>
