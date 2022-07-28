@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 // import { movies } from "./getMovies";
-import API_KEY from "../secrets"
+// import API_KEY from "../secrets"
 
 export default class List extends Component {
 
@@ -88,7 +88,7 @@ export default class List extends Component {
     // console.log("componentDidMount() is called");
     // console.log(API_KEY);
     let ans = await axios.get(`
-    https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currPage}`);
+    https://api.themoviedb.org/3/movie/popular?api_key=17b027020112db9765bfbca96d88b915&language=en-US&page=${this.state.currPage}`);
    
     // console.log(res.data);
     this.setState({
