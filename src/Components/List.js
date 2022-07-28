@@ -36,7 +36,7 @@ export default class List extends Component {
     
       // console.log("componentDidMount() is called");
       // console.log("changeMovies Called");
-      let ans = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currPage}`);
+      let ans = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=17b027020112db9765bfbca96d88b915&language=en-US&page=${this.state.currPage}`);
       // console.log(res.data);
       this.setState({
         movies : [...ans.data.results] //[{}, {}, {}]
