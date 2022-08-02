@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 secrets.js
+# Local Netlify folder
+.netlify
