@@ -1,0 +1,224 @@
+.App {
+  text-align: center;
+ 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+strong{
+  color: white;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.banner-card{
+  background-color: white;
+  width:100vw;
+}
+
+.banner-img{
+  height:70vh;
+  width:100%;
+}
+
+.banner-title{
+  position:absolute;
+  color:white;
+  top:40vh;
+  left:5vw;
+  /* font-size:2rem; */
+}
+.banner-text{
+  position:absolute;
+  color:white;
+  top:57vh;
+  left:5vw;
+  margin-right: 5vw;
+  /* overflow: hidden; */
+}
+
+.movies-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+.movie-card{
+width:20vw;
+margin:1rem;
+color:white;
+position: relative;
+}
+
+.movie-title{
+  position: absolute;
+  top:1rem;
+  left:1rem;
+}
+
+.movie-button{
+  position: absolute;
+  top:80%
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+
+.favourites-list{
+    padding: 3rem;
+  }
+  .favourites-table{
+    padding: 3rem;
+  }
+
+
+
+
+
+/* upto */
+@media screen and (max-width:400px) { 
+  .banner-card{
+    height:25vh;
+  }
+
+  .banner-img{
+    height:30vh;
+  }
+
+  .banner-title{
+    top:10vh;
+    left:5vw;
+  }
+
+  .banner-text{
+    top:10vh;
+    left:5vw;
+  }
+
+  .movie-card{
+    width: 40vw;
+    margin: 0.1rem;
+  }
+  .movie-button{
+    width: 80%;
+  }
+  .movie-img{
+    width: 40vw;
+  }
+  .favourites-list{
+    display: grid-sm;
+    font-size: x-small;
+    margin-left: 2rem;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .favourites-table{
+    display: block;
+    font-size: small;
+    width: 70%;
+    padding-left: 1rem;
+  }
+  
+  
+}
+@media screen and (max-width:850px) {
+  .favourites-list{
+    display: grid-sm;
+    font-size: x-small;
+    padding-left: 1rem;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .favourites-table{
+    display: block;
+    font-size: small;
+    width: 70%;
+    padding-left: 1rem;
+  }
+  .banner-card{
+    height:25vh;
+  }
+
+  .banner-img{
+    height:30vh;
+  }
+
+  .banner-title{
+    top:10vh;
+    left:5vw;
+  }
+
+  .banner-text{
+    font-size: xx-small;
+    top:20vh;
+    left:5vw;
+  }
+
+  .movie-card{
+    width: 40vw;
+    margin: 0.1rem;
+  }
+  .movie-button{
+    width: 80%;
+  }
+  .movie-img{
+    width: 40vw;
+  }
+  .favourites-list{
+    display: grid-sm;
+    font-size: x-small;
+    margin-left: 2rem;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .favourites-table{
+    display: block;
+    font-size: small;
+    width: 70%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+}
+
+.list :hover{
+  cursor: pointer;
+
+}
